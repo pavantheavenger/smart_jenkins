@@ -7,6 +7,11 @@ pipeline {
             }
         }
         stage("test"){
+            when {
+                expression {
+                    BRANCHNAME == 'dev'
+                }
+            }
             steps{
                 echo 'testing the application......'
             }
