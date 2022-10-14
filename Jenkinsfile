@@ -17,5 +17,16 @@ pipeline {
             }
         }
     }
+    post {
+        always{
+            echo 'Jenkins Job Completed .....'
+        }
+        success {
+            echo 'Jenkins Job Successfully Completed ......'
+        }
+        failure {
+            echo 'Jenkins Job Failed for some Reason......'
+        }
+    }
 }
 
